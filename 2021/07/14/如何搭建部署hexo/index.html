@@ -7,13 +7,20 @@
 
     
 
-    <title></title>
+    <title>如何搭建部署hexo | </title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="以下操作都是在Linux环境
+1.下载安装nodejs下载wget https://nodejs.org/dist/v14.17.3/node-v14.17.3-linux-x64.tar.xz
+解压
+tar -xvf node-v14.17.3-linux-x64.tar.xz
+删除压缩包
+rm ">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="如何搭建部署hexo"/>
     <meta property="og:site_name" content="Hexo"/>
 
     
@@ -190,112 +197,87 @@
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="/">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/1">
-               <div class="caption center-align">
-                 <h4>This is our big Tagline!</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/2">
-               <div class="caption left-align">
-                 <h4>Left Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/3">
-               <div class="caption right-align">
-                 <h4>Right Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
-
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
+<article>
     <div class="card">
         <div class="card-content">
+            
+
             <div class="article-title">
                 
     
-        <h1 class="indigo-link-context"><a href="/2021/07/14/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E9%83%A8%E7%BD%B2hexo/">如何搭建部署hexo</a></h1>
+        <h1>如何搭建部署hexo</h1>
     
 
 
             </div>
-
             <time class="pink-link-context" datetime="2021-07-14T11:46:14.000Z"><a href="/2021/07/14/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E9%83%A8%E7%BD%B2hexo/">2021-07-14</a></time>
 
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
             
 
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85nodejs"><span class="section table-of-contents-text">1.下载安装nodejs</span></a></li></ol>
+</div>
 
-            
-        </div>
 
-        
-    </div>
-</article>
+            <div class="entry pink-link-context">
+                <p>以下操作都是在Linux环境</p>
+<h2 id="1-下载安装nodejs"><a href="#1-下载安装nodejs" class="headerlink" title="1.下载安装nodejs"></a>1.下载安装nodejs</h2><p>下载<br><code>wget https://nodejs.org/dist/v14.17.3/node-v14.17.3-linux-x64.tar.xz</code></p>
+<p>解压</p>
+<p><code>tar -xvf node-v14.17.3-linux-x64.tar.xz</code></p>
+<p>删除压缩包</p>
+<p><code>rm node-node-v14.17.3-linux-x64.tar.xz</code></p>
+<p>##2.配置环境变量</p>
+<p>编辑<br><code> vim .bash_profile</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">新增环境变量</span><br><span class="line">export NODE_HOME=/node-v14.17.3-linux-x64</span><br><span class="line">export PATH=$PATH:$NODE_HOME/bin </span><br><span class="line">export NODE_PATH=$NODE_HOME/lib/node_modules</span><br></pre></td></tr></table></figure>
+<p>保存<br><code>:wq</code><br>提交<br><code>source .bash_porfile</code><br>检查是否安装成功</p>
+<pre><code class="node">npm -v```
 
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
+
+
+建议不要使用Windows环境，配置过程会比Linux和mac系统下遇到更多的不可预知情况
+我一开始使用Windows搭建，遇到过权限不足、powershell禁止脚本运行、环境变量配置等问题
+最终劝退Windows的原因是公司网络不行没办法部署到GitHub，正好手里有个华为云Linux。
+使用Linux配置之后才体会到省心啊！！
+</code></pre>
+
                 
-    
-        <h1 class="indigo-link-context"><a href="/2021/07/14/hello-world/">Hello World</a></h1>
-    
+
+
+<p class="pink-link-context">
+    <a href="/2021/07/14/hello-world/" rel="next" title="Hello World">
+    下一篇：Hello World
+  </a>
+</p>
 
 
             </div>
-
-            <time class="pink-link-context" datetime="2021-07-14T09:25:30.798Z"><a href="/2021/07/14/hello-world/">2021-07-14</a></time>
-
-            
-
-
-            
+			
         </div>
-
-        
     </div>
 </article>
 
-    
 
-    <ul class="pagination center-align">
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="active pink"><a href="/">1</a></li>
-    
-    
-    <li class="disabled">
-        <a href="/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
+
+
+
 
 </div>
 
