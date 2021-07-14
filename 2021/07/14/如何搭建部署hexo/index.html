@@ -233,7 +233,7 @@ rm ">
             
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85nodejs"><span class="section table-of-contents-text">1.下载安装nodejs</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="section table-of-contents-text">2.配置环境变量</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85nodejs"><span class="section table-of-contents-text">1.下载安装nodejs</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#2-%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="section table-of-contents-text">2.配置环境变量</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#3-%E5%88%A9%E7%94%A8npm%E5%AE%89%E8%A3%85cnpm"><span class="section table-of-contents-text">3.利用npm安装cnpm</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#4-%E5%AE%89%E8%A3%85hexo"><span class="section table-of-contents-text">4.安装hexo</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#5-%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAblog"><span class="section table-of-contents-text">5.使用hexo搭建blog</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#6-%E5%B0%86blog%E9%83%A8%E7%BD%B2%E5%88%B0GitHub%E7%9A%84gitpage%E4%B8%8A"><span class="section table-of-contents-text">6.将blog部署到GitHub的gitpage上</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#%E6%B3%A8%E6%84%8F"><span class="section table-of-contents-text">注意</span></a></li></ol>
 </div>
 
 
@@ -247,29 +247,26 @@ rm ">
 <h2 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h2><p>编辑<br><code> vim .bash_profile</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">新增环境变量</span><br><span class="line">export NODE_HOME=/node-v14.17.3-linux-x64</span><br><span class="line">export PATH=$PATH:$NODE_HOME/bin </span><br><span class="line">export NODE_PATH=$NODE_HOME/lib/node_modules</span><br></pre></td></tr></table></figure>
 <p>保存<br><code>:wq</code><br>提交<br><code>source .bash_porfile</code><br>检查是否安装成功</p>
-<figure class="highlight plaintext"><figcaption><span>-v</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm -v```</span><br><span class="line"></span><br><span class="line">## 3.利用npm安装cnpm</span><br><span class="line"></span><br><span class="line">因为使用外网源会比较卡，我使用了阿里的源</span><br><span class="line">```npm install -g cnpm --registry=https://registry.npm.taobao.org  ```</span><br><span class="line">验证下是否安装成功</span><br><span class="line">```cnpm -v ```</span><br><span class="line">## 4.安装hexo</span><br><span class="line">使用cnpm安装hexo</span><br><span class="line">```cnpm install -g hexo-cli ```</span><br><span class="line">检查是否安装成功</span><br></pre></td></tr></table></figure>
-<p>hexo -v<br>大家发没发现这些命令好多都是相同的（-v都是查看版本），所以不要对命令行操作有恐惧感。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## 5.使用hexo搭建blog</span><br><span class="line">在/tmp目录下创建一个blog的文件夹，以后生成的关于hexo博客的文件全都在这里</span><br></pre></td></tr></table></figure>
-<p>cd /tmp<br>mkdir blog<br>cd blog</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">初始化blog</span><br></pre></td></tr></table></figure>
-<p>hexo init<br>初始化blog会用到git命令，一般Linux会默认安装，如果没有请百度。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## 6.将blog部署到GitHub的gitpage上</span><br><span class="line">安装hexo-deployer-git</span><br><span class="line">```cnpm install --save hexo-deployer-git ```</span><br><span class="line"></span><br><span class="line">编辑blog目录下的_config.yml文件添加如下内容</span><br></pre></td></tr></table></figure>
-<p>deploy:<br>    type: git<br>    repo: <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:yanxipeng001/yanxipeng001.github.io.git<br>    branch: main<br>github建议使用ssh地址，github ssh的配置可以百度了解下。<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用如下命令对git进行初始配置</span><br></pre></td></tr></table></figure><br>git config –global user.name “your name”<br>git config –global user.email “<a href="mailto:&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a>“</p>
-<pre><code>清理之前生成的内容
-```hexo clean```
-生成静态文件
-```hexo g ```
-部署到github
-```hexo d```
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
-## 注意
-有关Gitpage的配置我没写，请查看别人的资料吧~~~
+<h2 id="3-利用npm安装cnpm"><a href="#3-利用npm安装cnpm" class="headerlink" title="3.利用npm安装cnpm"></a>3.利用npm安装cnpm</h2><p>因为使用外网源会比较卡，我使用了阿里的源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org  </span><br></pre></td></tr></table></figure>
+<p>验证下是否安装成功<br><code>cnpm -v </code></p>
+<h2 id="4-安装hexo"><a href="#4-安装hexo" class="headerlink" title="4.安装hexo"></a>4.安装hexo</h2><p>使用cnpm安装hexo<br><code>cnpm install -g hexo-cli </code><br>检查是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br><span class="line">大家发没发现这些命令好多都是相同的（-v都是查看版本），所以不要对命令行操作有恐惧感。</span><br></pre></td></tr></table></figure>
+<h2 id="5-使用hexo搭建blog"><a href="#5-使用hexo搭建blog" class="headerlink" title="5.使用hexo搭建blog"></a>5.使用hexo搭建blog</h2><p>在/tmp目录下创建一个blog的文件夹，以后生成的关于hexo博客的文件全都在这里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp</span><br><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+<p>初始化blog</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">初始化blog会用到git命令，一般Linux会默认安装，如果没有请百度。</span><br></pre></td></tr></table></figure>
+<h2 id="6-将blog部署到GitHub的gitpage上"><a href="#6-将blog部署到GitHub的gitpage上" class="headerlink" title="6.将blog部署到GitHub的gitpage上"></a>6.将blog部署到GitHub的gitpage上</h2><p>安装hexo-deployer-git<br><code>cnpm install --save hexo-deployer-git </code></p>
+<p>编辑blog目录下的_config.yml文件添加如下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:yanxipeng001/yanxipeng001.github.io.git</span><br><span class="line">    branch: main</span><br><span class="line">github建议使用ssh地址，github ssh的配置可以百度了解下。</span><br></pre></td></tr></table></figure>
 
-建议不要使用Windows环境，配置过程会比Linux和mac系统下遇到更多的不可预知情况
-我一开始使用Windows搭建，遇到过权限不足、powershell禁止脚本运行、环境变量配置等问题
-最终劝退Windows的原因是公司网络不行没办法部署到GitHub，正好手里有个华为云Linux。
-使用Linux配置之后才体会到省心啊！！
-</code></pre>
+<p>使用如下命令对git进行初始配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;your name&quot;</span><br><span class="line">git config --global user.email &quot;email@email.com&quot;</span><br></pre></td></tr></table></figure>
+<p>清理之前生成的内容<br><code>hexo clean</code><br>生成静态文件<br><code>hexo g </code><br>部署到github<br><code>hexo d</code></p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>有关Gitpage的配置我没写，请查看别人的资料吧~~~</p>
+<p>建议不要使用Windows环境，配置过程会比Linux和mac系统下遇到更多的不可预知情况<br>我一开始使用Windows搭建，遇到过权限不足、powershell禁止脚本运行、环境变量配置等问题<br>最终劝退Windows的原因是公司网络不行没办法部署到GitHub，正好手里有个华为云Linux。<br>使用Linux配置之后才体会到省心啊！！</p>
 
                 
 
