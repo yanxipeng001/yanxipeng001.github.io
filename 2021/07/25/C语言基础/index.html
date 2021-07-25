@@ -14,7 +14,7 @@
 <meta property="og:description" content="C语言定义变量定义一个变量 1int price;  给变量赋值 1price &#x3D; 10;  定义一个变量的同时给变量赋值，又叫变量的初始化 1int num &#x3D; 10;  C语言使用变量之前必须赋值或者初始化 试试只定义变量是什么情况 1234int i;printf(&quot;%d\n&quot;, i);结果4203721&#x2F;&#x2F;也可能是任意其他的值  定义变量i，会在内存中为这个变量i开辟出">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-25T15:59:47.000Z">
-<meta property="article:modified_time" content="2021-07-25T16:00:41.278Z">
+<meta property="article:modified_time" content="2021-07-25T16:10:45.942Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -287,9 +287,10 @@
 </ul>
 <p>不能用浮点数去做一些精细的计算，可以业务上转换成整数去做运算，或者使用BCD的数来做计算，传统的计算器都是用BCD运算</p>
 <h4 id="浮点数的内部表达"><a href="#浮点数的内部表达" class="headerlink" title="浮点数的内部表达"></a>浮点数的内部表达</h4><p>浮点是用编码形式表示，不是一个二进制数</p>
-<p>sign   <em><strong><strong><strong>exponent(11bit)</strong></strong></strong></em>        __________________<em><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>fraction(52bit)</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></em></p>
-<p>  |     |                                        |                                                                                                          |</p>
-<p>63    62        ….                         52                        …                        …                        …                        0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sign___exponent(11bit)__________fraction(52bit)___________________________</span><br><span class="line">|    |							|											|</span><br><span class="line">63	62		    ....    	 	52	     ...    	...			...			0</span><br></pre></td></tr></table></figure>
+
+
+
 <p>浮点数在计算时是由专用的硬件部件实现的（先把编码解开-&gt;再计算-&gt;计算出结果后再编码）</p>
 <p>计算double和float所用的部件是一样的</p>
 <h4 id="选择浮点类型"><a href="#选择浮点类型" class="headerlink" title="选择浮点类型"></a>选择浮点类型</h4><p>如果没特殊需要选择double</p>
@@ -494,7 +495,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://yanxipeng001.github.io/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrje1tbg0003u6wd4ax7h71h" class="article-share-link" data-share="baidu" data-title="C语言基础">分享到</a>
+        <a data-url="https://yanxipeng001.github.io/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrjeejkf0003wuwd7f7xcofu" class="article-share-link" data-share="baidu" data-title="C语言基础">分享到</a>
       
 
       
