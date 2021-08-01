@@ -68,6 +68,58 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-搭建虚拟机网络遇到的一些问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/08/01/%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2021-08-01T12:51:00.000Z" itemprop="datePublished">2021-08-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/01/%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">搭建虚拟机网络遇到的一些问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Virtual-Box配置虚拟机网络"><a href="#Virtual-Box配置虚拟机网络" class="headerlink" title="Virtual Box配置虚拟机网络"></a>Virtual Box配置虚拟机网络</h1><p>我在virtualbox中配置了三台centos虚拟机，使用了NAT方式，但是每台虚拟机ifconfig得到的inet都是10.0.2.15</p>
+<p>原因可能是我的各个虚拟机在不同的子网下。</p>
+<p>查了很多博客最后解决办法是使用了仅主机的模式：</p>
+<p>以下是我参考的链接</p>
+<h4 id="VirtualBox网络之仅主机-Host-Only-网络"><a href="#VirtualBox网络之仅主机-Host-Only-网络" class="headerlink" title="VirtualBox网络之仅主机(Host-Only)网络:"></a>VirtualBox网络之仅主机(Host-Only)网络:</h4><p>*** <a target="_blank" rel="noopener" href="https://blog.csdn.net/dkfajsldfsdfsd/article/details/79441874">https://blog.csdn.net/dkfajsldfsdfsd/article/details/79441874</a>**</p>
+<h4 id="VirtualBox网络之nat网络："><a href="#VirtualBox网络之nat网络：" class="headerlink" title="VirtualBox网络之nat网络："></a>VirtualBox网络之nat网络：</h4><p>*** <a target="_blank" rel="noopener" href="https://blog.csdn.net/dkfajsldfsdfsd/article/details/79403343">https://blog.csdn.net/dkfajsldfsdfsd/article/details/79403343</a>**</p>
+<h4 id="Centos查IP地址出现inet6-addr-fe88-20c-29ff-fe47-5015-64-Scope-link。该怎么解决呢？"><a href="#Centos查IP地址出现inet6-addr-fe88-20c-29ff-fe47-5015-64-Scope-link。该怎么解决呢？" class="headerlink" title="Centos查IP地址出现inet6 addr:fe88::20c 29ff:fe47:5015/64 Scope:link。该怎么解决呢？"></a>Centos查IP地址出现inet6 addr:fe88::20c 29ff:fe47:5015/64 Scope:link。该怎么解决呢？</h4><p>*** <a target="_blank" rel="noopener" href="https://www.imooc.com/wenda/detail/315544">https://www.imooc.com/wenda/detail/315544</a>**</p>
+<h4 id="另外再看看Vmware下的-桥接与NAT连接的区别"><a href="#另外再看看Vmware下的-桥接与NAT连接的区别" class="headerlink" title="另外再看看Vmware下的 桥接与NAT连接的区别"></a>另外再看看Vmware下的 桥接与NAT连接的区别</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhengqijun_/article/details/69788894">https://blog.csdn.net/zhengqijun_/article/details/69788894</a></p>
+<h4 id="VMware虚拟机三种网络模式：桥接模式，NAT模式，仅主机模式"><a href="#VMware虚拟机三种网络模式：桥接模式，NAT模式，仅主机模式" class="headerlink" title="VMware虚拟机三种网络模式：桥接模式，NAT模式，仅主机模式"></a>VMware虚拟机三种网络模式：桥接模式，NAT模式，仅主机模式</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39192827/article/details/85872025">https://blog.csdn.net/qq_39192827/article/details/85872025</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wmxl/p/9379562.html">https://www.cnblogs.com/wmxl/p/9379562.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="https://yanxipeng001.github.io/2021/08/01/%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/" data-id="ckrt7du700002awwdhgkc08vv" class="article-share-link" data-share="baidu" data-title="搭建虚拟机网络遇到的一些问题">分享到</a>
+      
+
+      
+        <a href="https://yanxipeng001.github.io/2021/08/01/%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/#ds-thread" class="article-comment-link">评论</a>
+      
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-C语言基础" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" class="article-date">
@@ -535,7 +587,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://yanxipeng001.github.io/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrlr3pch0003fmwdav88cxhe" class="article-share-link" data-share="baidu" data-title="C语言基础">分享到</a>
+        <a data-url="https://yanxipeng001.github.io/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrt7du7a0004awwdafrggb3d" class="article-share-link" data-share="baidu" data-title="C语言基础">分享到</a>
       
 
       
@@ -738,7 +790,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://yanxipeng001.github.io/2021/07/15/Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrlr3pce0002fmwdfct5gzjt" class="article-share-link" data-share="baidu" data-title="Go语言基础">分享到</a>
+        <a data-url="https://yanxipeng001.github.io/2021/07/15/Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" data-id="ckrt7du770003awwd9q6o0im8" class="article-share-link" data-share="baidu" data-title="Go语言基础">分享到</a>
       
 
       
@@ -809,7 +861,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://yanxipeng001.github.io/2021/07/14/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E9%83%A8%E7%BD%B2hexo/" data-id="ckrlr3pc30001fmwd3yub2d8i" class="article-share-link" data-share="baidu" data-title="如何搭建部署hexo">分享到</a>
+        <a data-url="https://yanxipeng001.github.io/2021/07/14/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E9%83%A8%E7%BD%B2hexo/" data-id="ckrt7du6v0001awwd3n8c3fv1" class="article-share-link" data-share="baidu" data-title="如何搭建部署hexo">分享到</a>
       
 
       
@@ -864,7 +916,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://yanxipeng001.github.io/2021/07/14/hello-world/" data-id="ckrlr3pby0000fmwd61sd5dn9" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
+        <a data-url="https://yanxipeng001.github.io/2021/07/14/hello-world/" data-id="ckrt7du6q0000awwd7vm79dti" class="article-share-link" data-share="baidu" data-title="Hello World">分享到</a>
       
 
       
@@ -894,7 +946,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">七月 2021</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -904,6 +956,10 @@
     <h3 class="widget-title">近期文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/08/01/%E6%90%AD%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/">搭建虚拟机网络遇到的一些问题</a>
+          </li>
         
           <li>
             <a href="/2021/07/25/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">C语言基础</a>
